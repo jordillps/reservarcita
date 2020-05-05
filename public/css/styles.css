@@ -1,0 +1,61 @@
+
+.reservation-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#fff;
+}
+
+
+
+.card-elegant {
+
+    box-shadow:0 2px 4px rgba(0,0,0,1);
+    border: none;
+    width: 80%;
+    max-width: 800px;
+  }
+  .card-elegant .card-block {
+    padding: 2rem;
+    text-align: left;
+    background-color: rgb(206, 206, 206);
+  }
+
+  .card-elegant .card-title {
+    font-weight: normal;
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    color: rgb(80, 80, 80);
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+  }
+
+
+
+  .card-elegant .card-text {
+    border-bottom: .15rem solid #C7C7C5;
+    color:rgb(80, 80, 80);
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+    margin: 0 auto 2.4rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .input__button{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin:1em;
+
+  }
+
+
+  .unavailable{
+      opacity: 0.4;
+  }
+
+
+
+
+
