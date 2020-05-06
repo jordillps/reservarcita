@@ -42,18 +42,63 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-  .input__button{
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      margin:1em;
-
+  .alert{
+    box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
   }
 
 
-  .unavailable{
-      opacity: 0.4;
+  .input__button {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:1em;
   }
+  
+  .input__button > div {
+    /* flex: 1; */
+    padding: 0.5rem;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:not(:disabled) ~ label {
+    cursor: pointer;
+  }
+  input[type="radio"]:disabled ~ label {
+    color: #bcc2bf;
+    border-color: #bcc2bf;
+  }
+  
+  .slots{
+    display: block;
+    background: #d7f3e3;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem 2.5em;
+    text-align: center;
+    box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+  }
+
+  .slots .unavailable{
+    opacity: 0.6;
+    background-color: #e3342f;
+  }
+  
+  input[type="radio"]:checked + label {
+    background: #38c172;
+    color: white;
+  }
+  
+  .slots p {
+    font-weight: 900;
+    margin:0;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .input__button  {
+      flex-direction: column;
+    }
 
 
 

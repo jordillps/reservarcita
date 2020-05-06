@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('reservation', 'ReservationController@store')->name('reservation.store');
+
 
 Route::put('confirmed/{reservation}', 'ReservationController@update')->name('reservation.update');
+
+Route::post('reservation', 'ReservationController@store')->name('reservation.store');
