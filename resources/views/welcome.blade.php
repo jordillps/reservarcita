@@ -56,7 +56,7 @@
 
             //Date picker
             $('#reservation_date').datepicker({
-                startDate: new Date('01-05-2020'),
+                startDate: '+1d',
                 format: 'dd-mm-yyyy',
                 autoclose: true,
                 todayHighlight:true,

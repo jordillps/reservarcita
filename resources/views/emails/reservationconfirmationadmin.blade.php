@@ -38,7 +38,7 @@
                                 <!-- Body content --><tr>
                                 <td class="content-cell" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
                                         <h1 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 19px; font-weight: bold; margin-top: 0; text-align: left;">Reserva Confirmada</h1>
-                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Li confirmem que hem rebut la seva reserva amb les següents dades</p>
+                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Hem rebut una nova reserva</p>
                                             {{-- <a href="" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #3a6ede;">doloremque eaque</a> --}}
                                         <h2 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 16px; font-weight: bold; margin-top: 0; text-align: left;">Dades de la reserva</h2>
                                             <div class="table" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
@@ -49,6 +49,18 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
+                                                        <tr>
+                                                            <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px; padding: 10px 0;">Nom</td>
+                                                            <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px; padding: 10px 0; text-align: right;">{{$name}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px; padding: 10px 0;">Correu</td>
+                                                            <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px; padding: 10px 0; text-align: right;">{{$email}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px; padding: 10px 0;">Telèfon</td>
+                                                            <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px; padding: 10px 0; text-align: right;">{{$phone}}</td>
+                                                        </tr>
                                                         <tr>
                                                             <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px; padding: 10px 0;">Data</td>
                                                             <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 15px; line-height: 18px; padding: 10px 0; text-align: right;">{{$reservation_date->format('d-m-Y')}}</td>
@@ -116,8 +128,8 @@
                                             <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; line-height: 1.5em; margin-top: 0; font-size: 15px; text-align: center;">Coupon code: MarkdownMail</p>
                                             </td>
                                  </tr></table> --}}
-                                        <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #fffff; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Moltes gràcies,<br>
-                                        Botiga Joan</p>
+                                        {{-- <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 16px; line-height: 1.5em; margin-top: 0; text-align: left;">Moltes gràcies,<br>
+                                        Botiga Joan</p> --}}
                                         {{-- <table class="subcopy" width="100%" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-top: 1px solid #edeff2; margin-top: 25px; padding-top: 25px;"><tr>
                                                 <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
                                                 <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; line-height: 1.5em; margin-top: 0; text-align: left; font-size: 12px;">This is the subcopy of the email</p>
@@ -132,7 +144,7 @@
                             <td style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
                             <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; margin: 0 auto; padding: 0; text-align: center; width: 570px; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 570px;"><tr>
                                     <td class="content-cell" align="center" style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px;">
-                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height: 1.5em; margin-top: 0; color: #aeaeae; font-size: 12px; text-align: center;">© 2020 Formal Web.Tots els drets reservats.</p>
+                                    <p style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; line-height: 1.5em; margin-top: 0; color: #ffffff; font-size: 12px; text-align: center;">© 2020 Formal Web.Tots els drets reservats.</p>
                                 </td>
                     </tr></table>
                 </td>

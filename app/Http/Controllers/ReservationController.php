@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Customer;
 use App\Mail\ReservationConfirmation;
-use Illuminate\Support\Facades\Mail;
+use App\Mail\ReservationConfirmationAdmin;
 use App\User;
+use Illuminate\Support\Facades\Mail;
 
 class ReservationController extends Controller
 {
@@ -118,17 +119,17 @@ class ReservationController extends Controller
     public function update(Reservation $reservation, Request $request)
     {
 
-        
+
         $reservation->slot = $request->get('slot');
         $reservation->save();
 
         //Send an email confirmation to the customer
-        Mail::to($reservation->email())->send(new ReservationConfirmation($reservation));
+        Mail::to($reservation->email)->send(new ReservationConfirmation($reservation));
 
         $user_admin = User::find(1);
 
         //Send an email confirmation to the administrator
-        Mail::to($user_admin->email())->send(new ReservationConfirmation($reservation));
+        Mail::to($user_admin->email)->send(new ReservationConfirmationAdmin($reservation));
 
         return view('confirmedreservation',compact('reservation'))->with('flash',trans('global.reservationconfirmed'));
 

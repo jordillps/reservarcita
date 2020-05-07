@@ -8,7 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use App\Reservation;
 
-class ReservationConfirmation extends Mailable
+class ReservationConfirmationAdmin extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -32,8 +32,11 @@ class ReservationConfirmation extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.reservationconfirmation')
+        return $this->markdown('emails.reservationconfirmationadmin')
         ->with([
+            'name' => $this->reservation->name,
+            'email' => $this->reservation->email,
+            'phone' => $this->reservation->phone,
             'reservation_date' => $this->reservation->reservation_date,
             'slot' => $this->reservation->slot,
         ]);
