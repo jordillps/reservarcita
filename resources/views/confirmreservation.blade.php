@@ -58,14 +58,14 @@
                 </div>
                 <div class="form-group">
                     <div class="form-check">
-                        <input class="form-check-input" name="accept_politics" type="checkbox" id="valuesInput">
+                        <input class="form-check-input" name="accept_politics" type="checkbox" id="accept_politics">
                         <label class="form-check-label" for="gridCheck">
                            <p>Accepto la política de privacitat</p>  
                         </label>
                     </div>
                     {!! $errors->first('accept_politics', '<span class="help-block" style="color:red;">:message</span>')!!}
                 </div>
-                <button type="submit" class="btn btn-primary" id="submit" disabled="disabled">Reservar</button>
+                <button type="submit" class="btn btn-primary" id="btncheck" disabled>Reservar</button>
                 <a href="{{url('/')}}" class="btn btn-primary">Tornar</a>
             </form>
         </div>
@@ -76,21 +76,11 @@
 @push('scripts')
     <script src="/js/jquery.min.js"></script>
     <script>
-        (function() {
-            $('form input:checkbox').keyup(function() {
-        
-                var empty = false;
-                $('form input:checkbox').each(function() {
-                    if ($(this).val() == '') {
-                        empty = true;
-                    }
-                });
-        
-                if (empty == true) {
-                    $('#submit').removeAttr('disabled');
-                } 
+        $("input:radio").change(function () {
+            $('#accept_politics').change(function () {
+                $('#btncheck').prop("disabled", !this.checked);
             });
-        })()
+        });
     </script>;
 
 @endpush
