@@ -49,7 +49,7 @@
 <!-- date-range-picker -->
     <script src="/js/app.js"></script>
     <script src="/datepicker/datepicker.min.js"></script>
-    <script src="/datepicker/datepicker.es.min.js"></script>
+    <script src="/datepicker/datepicker.ca.min.js"></script>
 
     <script>
         $(function () {
@@ -60,7 +60,7 @@
                 format: 'dd-mm-yyyy',
                 autoclose: true,
                 todayHighlight:true,
-                language: 'es',
+                language: 'ca',
                 daysOfWeekDisabled: [0],
 
             })

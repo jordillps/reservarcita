@@ -3,9 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100%; */
     height: 100vh;
-    background-color:#fff;
+    background-color:rgb(224, 251, 242);
 
 }
 
@@ -18,6 +17,7 @@
     width: 80%;
     max-width: 800px;
     /* margin: 0.1em auto 0.1em auto; */
+    max-height: 90vh;
 
   }
 
